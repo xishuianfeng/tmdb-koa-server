@@ -1,5 +1,5 @@
-import globalConst from '../globalConst/globalConst'
-import axios from 'axios'
+const globalConst = require('../globalConst/globalConst');
+const axios = require('axios');
 
 const getMovieDetail = (id) => {
   return new Promise((resolve, reject) => {
@@ -18,4 +18,6 @@ const getMovieDetail = (id) => {
   })
 }
 
-export default getMovieDetail
+module.exports = {
+  getMovieDetail
+};

@@ -1,10 +1,9 @@
-import axios from "axios";
-import globalConst from '../globalConst/globalConst'
+const globalConst = require('../globalConst/globalConst');
+const axios = require('axios');
 
 //评分最高
 const getTopRated = (page) => {
   return new Promise((resolve, reject) => {
-    let results
     axios.get(globalConst.tmdbUrl + 'movie/top_rated', {
       params: {
         api_key: globalConst.apiKey,
@@ -13,16 +12,16 @@ const getTopRated = (page) => {
         region: 'cn'
       },
     }).then((res) => {
-      results = res.data
-    })
-    resolve(results)
+      resolve(res.data);
+    }).catch((error) => {
+      reject(error);
+    });
   })
 }
 
 //最流行的
 const getPopular = (page) => {
   return new Promise((resolve, reject) => {
-    let results
     axios.get(globalConst.tmdbUrl + 'movie/popular', {
       params: {
         api_key: globalConst.apiKey,
@@ -31,16 +30,16 @@ const getPopular = (page) => {
         region: 'cn'
       },
     }).then((res) => {
-      results = res.data
-    })
-    resolve(results)
+      resolve(res.data);
+    }).catch((error) => {
+      reject(error);
+    });
   })
 }
 
 //即将到来
 const getUpcoming = (page) => {
   return new Promise((resolve, reject) => {
-    let results
     axios.get(globalConst.tmdbUrl + 'movie/upcoming', {
       params: {
         api_key: globalConst.apiKey,
@@ -49,9 +48,10 @@ const getUpcoming = (page) => {
         region: 'cn'
       },
     }).then((res) => {
-      results = res.data
-    })
-    resolve(results)
+      resolve(res.data);
+    }).catch((error) => {
+      reject(error);
+    });
   })
 }
 
@@ -59,6 +59,6 @@ const getMovieList = {
   getTopRated,
   getPopular,
   getUpcoming
-}
+};
 
-export default getMovieList
+module.exports = getMovieList;
