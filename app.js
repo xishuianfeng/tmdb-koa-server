@@ -10,8 +10,6 @@ app.use(async (ctx, next) => {
     await next();
 });
 
-
-
 // add router middleware:
 app.use(router.routes());
 

@@ -3,24 +3,24 @@ const getMovieList = require('../api/getMovieList');
 const router = require('koa-router')();
 
 
-router.get('/movie/top_rated', async (ctx, next) => {
-  const response = await getMovieList.getTopRated()
+router.get('/movie/top_rated/:page', async (ctx, next) => {
+  const page = ctx.params.page;
+  const response = await getMovieList.getTopRated(page)
   ctx.response.body = response;
-  console.log(response.page);
   await next();
 });
 
-router.get('/movie/popular', async (ctx, next) => {
-  const response = await getMovieList.getPopular()
+router.get('/movie/popular/:page', async (ctx, next) => {
+  const page = ctx.params.page;
+  const response = await getMovieList.getPopular(page)
   ctx.response.body = response;
-  console.log(response.page);
   await next();
 });
 
-router.get('/movie/upcoming', async (ctx, next) => {
-  const response = await getMovieList.getUpcoming()
+router.get('/movie/upcoming/:page', async (ctx, next) => {
+  const page = ctx.params.page;
+  const response = await getMovieList.getUpcoming(page)
   ctx.response.body = response;
-  console.log(response.page);
   await next();
 });
 
