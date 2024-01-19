@@ -8,6 +8,12 @@ dependencies:
   axios:
     specifier: ^1.6.5
     version: registry.npmmirror.com/axios@1.6.5
+  fs:
+    specifier: 0.0.1-security
+    version: registry.npmmirror.com/fs@0.0.1-security
+  https:
+    specifier: ^1.0.0
+    version: registry.npmmirror.com/https@1.0.0
   koa:
     specifier: 2.0.0
     version: registry.npmmirror.com/koa@2.0.0
@@ -17,6 +23,9 @@ dependencies:
   koa-router:
     specifier: ^12.0.1
     version: registry.npmmirror.com/koa-router@12.0.1
+  koa-sslify:
+    specifier: ^5.0.1
+    version: registry.npmmirror.com/koa-sslify@5.0.1
 
 packages:
 
@@ -243,6 +252,12 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
+  registry.npmmirror.com/fs@0.0.1-security:
+    resolution: {integrity: sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fs/-/fs-0.0.1-security.tgz}
+    name: fs
+    version: 0.0.1-security
+    dev: false
+
   registry.npmmirror.com/function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/function-bind/-/function-bind-1.1.2.tgz}
     name: function-bind
@@ -344,6 +359,12 @@ packages:
       toidentifier: registry.npmmirror.com/toidentifier@1.0.1
     dev: false
 
+  registry.npmmirror.com/https@1.0.0:
+    resolution: {integrity: sha512-4EC57ddXrkaF0x83Oj8sM6SLQHAWXw90Skqu2M4AEWENZ3F02dFJE/GARA8igO79tcgYqGrD7ae4f5L3um2lgg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/https/-/https-1.0.0.tgz}
+    name: https
+    version: 1.0.0
+    dev: false
+
   registry.npmmirror.com/iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/iconv-lite/-/iconv-lite-0.4.24.tgz}
     name: iconv-lite
@@ -436,6 +457,13 @@ packages:
       path-to-regexp: registry.npmmirror.com/path-to-regexp@6.2.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  registry.npmmirror.com/koa-sslify@5.0.1:
+    resolution: {integrity: sha512-QwQgMvNPyePpngghYZxeuPzeQqMOFYUXiKu8pd4wz9rd7ZmoOq4VKtoEIjctLt3Qcfv2aHL/0UIRAmIK4qDczg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/koa-sslify/-/koa-sslify-5.0.1.tgz}
+    name: koa-sslify
+    version: 5.0.1
+    engines: {node: '>6.0.0'}
     dev: false
 
   registry.npmmirror.com/koa@2.0.0:
